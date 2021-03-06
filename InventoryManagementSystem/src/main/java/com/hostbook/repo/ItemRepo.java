@@ -6,5 +6,4 @@ import com.hostbook.model.Item;
 
 public interface ItemRepo extends JpaRepository<Item, Integer> {
 
-
 }

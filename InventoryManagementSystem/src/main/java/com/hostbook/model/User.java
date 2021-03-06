@@ -33,5 +33,7 @@ public class User {
 	private String userRole;
 	private String userStatus;
 
-	
+	@ManyToOne
+	@JoinColumn(name = "itemFK")
+	private Item itemOb;
 }

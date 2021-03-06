@@ -15,6 +15,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.hostbook.model.Item;
+import com.hostbook.service.IItemService;
 import com.hostbook.service.impl.ItemServiceImpl;
 
 /*	 Go to postman then , try all the below url's , 
@@ -30,7 +31,7 @@ import com.hostbook.service.impl.ItemServiceImpl;
 public class ItemController {
 
 	@Autowired
-	private ItemServiceImpl service;
+	private IItemService service;
 
 //	Creating New Items Account
 	@PostMapping("/save")
@@ -42,8 +43,8 @@ public class ItemController {
 		return response;
 	}
 
-	// Item  Modification
-	// Examples to do modification in operation 
+	// Item Modification
+	// Examples to do modification in operation
 	// localhost:8080/item/update/4
 	/*
 	 * { "id":"4", "itemName":"laptop", "itemImage":"abcdef.jpg",

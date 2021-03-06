@@ -15,7 +15,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.hostbook.model.User;
-import com.hostbook.service.impl.UserServiceImpl;
+import com.hostbook.service.IItemService;
+import com.hostbook.service.IUserService;
 
 /*	 Go to postman then , try all the below url's , 
  *   to check all the operations 
@@ -30,7 +31,7 @@ import com.hostbook.service.impl.UserServiceImpl;
 public class UserController {
 
 	@Autowired
-	private UserServiceImpl service;
+	private IUserService service;
 
 //	Creating New Users Account
 	@PostMapping("/save")
